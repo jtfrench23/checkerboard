@@ -1,10 +1,24 @@
+
+#checkerboard{
+    display: flex;
+    margin: 0px auto;
+    justify-content: center;
+}
+.row{
+    display: block;
+}
 .boxTypeOne{
     background-color: black;
     width: 50px;
     height: 50px;
+    
 }
 .boxTypeTwo{
     background-color: red;
     width: 50px;
     height: 50px;
+}
+h1{
+    color: red;
+    text-align: center;
 }

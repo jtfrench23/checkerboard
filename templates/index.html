@@ -11,8 +11,32 @@
 <body>
     <h1>Checkerboard Assignment</h1>
     <div id="checkerboard">
-        {% for x in range (8) %}
-                <div class="squareTypeOne"></div>
+        {% for y in range (rows) %}
+            {% if y%2 != 0 %}
+                <div class="row">   
+                    {% for x in range (columns) %}
+                        {% if x%2 != 0%}        
+                            <div class="boxTypeOne"></div>
+                        {% endif %}
+                        {% if x%2==0 %}
+                            <div class="boxTypeTwo"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div> 
+            {% endif %}
+            {% if y%2 == 0 %}
+                <div class="row">
+                    {% for x in range (columns) %}
+                        {% if x%2 != 0%}        
+                            <div class="boxTypeTwo"></div>
+                        {% endif %}
+                        {% if x%2==0 %}
+                            <div class="boxTypeOne"></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <br>
         {% endfor %}
     </div>
 </body>

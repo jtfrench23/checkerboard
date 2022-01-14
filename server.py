@@ -6,11 +6,13 @@ def hello_world():
     return render_template('index.html', columns=8, rows=8, colorOne='black', colorTwo='red')
 @app.route('/<int:columns>')
 def column_number(columns):
-    return render_template('index.html', columns=columns, rows=8)
+    return render_template('index.html', columns=columns, rows=8, colorOne='black', colorTwo='red')
 @app.route('/<int:columns>/<int:rows>')
 def column_and_row(columns,rows):
-    return render_template('index.html', columns=columns, rows=rows)
-
+    return render_template('index.html', columns=columns, rows=rows, colorOne='black', colorTwo='red')
+@app.route('/<int:columns>/<int:rows>/<string:colorOne>/<string:colorTwo>')
+def all_param(columns, rows, colorOne, colorTwo):
+    return render_template('index.html', columns=columns, rows=rows, colorOne=colorOne, colorTwo=colorTwo)
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)    # Run the app in debug mode.
 

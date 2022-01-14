@@ -16,10 +16,10 @@
                 <div class="row">   
                     {% for x in range (columns) %}
                         {% if x%2 != 0%}        
-                            <div class="boxTypeOne"></div>
+                            <div class="boxTypeOne" style="background-color: {{colorOne}};"></div>
                         {% endif %}
                         {% if x%2==0 %}
-                            <div class="boxTypeTwo"></div>
+                            <div class="boxTypeTwo" style="background-color: {{colorTwo}};"></div>
                         {% endif %}
                     {% endfor %}
                 </div> 
@@ -28,15 +28,14 @@
                 <div class="row">
                     {% for x in range (columns) %}
                         {% if x%2 != 0%}        
-                            <div class="boxTypeTwo"></div>
+                            <div class="boxTypeTwo" style="background-color:{{colorTwo}};"></div>
                         {% endif %}
                         {% if x%2==0 %}
-                            <div class="boxTypeOne"></div>
+                            <div class="boxTypeOne" style="background-color: {{colorOne}};"></div>
                         {% endif %}
                     {% endfor %}
                 </div>
             {% endif %}
-            <br>
         {% endfor %}
     </div>
 </body>
